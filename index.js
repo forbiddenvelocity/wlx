@@ -8,6 +8,7 @@ dBConnect();
 app.use('/', (req, res) => {
     res.send("Hello World");
 })
+app.use("/api/user", authRouter)
 app.listen(PORT, () => {
     console.log(`Server is running at PORT ${PORT}`);
 })
